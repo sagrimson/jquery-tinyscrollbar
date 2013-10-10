@@ -10,7 +10,7 @@
  * @version 1.81
  * @author Maarten Baijs
  *
- */
+ ***/
 ;( function( $ ) 
 {
     $.tiny = $.tiny || { };
@@ -111,7 +111,7 @@
             }
             else
             {
-                oViewport.obj[0].ontouchstart = function( event )
+                oThumb.obj[0].ontouchstart = function( event )
                 {   
                     if( 1 === event.touches.length )
                     {
