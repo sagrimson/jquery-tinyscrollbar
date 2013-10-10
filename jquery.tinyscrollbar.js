@@ -111,14 +111,29 @@
             }
             else
             {
-                oThumb.obj[0].ontouchstart = function( event )
+
+                oViewport.obj[0].ontouchstart = function( event )
                 {   
+                    options.invertscroll = true;
+
                     if( 1 === event.touches.length )
                     {
                         start( event.touches[ 0 ] );
                         event.stopPropagation();
                     }
                 };
+
+                oThumb.obj[0].ontouchstart = function( event )
+                {   
+                    options.invertscroll = false;
+
+                    if( 1 === event.touches.length )
+                    {
+                        start( event.touches[ 0 ] );
+                        event.stopPropagation();
+                    }
+                };
+
             }
 
             if( options.scroll && window.addEventListener )
